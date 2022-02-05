@@ -1,0 +1,37 @@
+FROM ubuntu:20.04
+
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt update
+
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Berlin
+RUN apt install -y tzdata
+
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt install -y \
+ make \
+ git \
+ autoconf \
+ coreutils \
+ file \
+ zip \
+ openjdk-17-jdk-headless \
+ gcc \
+ g++ \
+ libx11-dev \
+ libxext-dev \
+ libxrender-dev \
+ libxrandr-dev \
+ libxtst-dev \
+ libxt-dev \
+ libcups2-dev \
+ libfontconfig1-dev \
+ libasound2-dev \
+ wget \
+ cpio \
+ rpm2cpio
+
+
+# Local Variables:
+# mode: dockerfile
+# End:
